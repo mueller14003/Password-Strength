@@ -5,7 +5,6 @@ import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 from math import ceil, log2
-from functools import reduce
 
 a_size = {"l":26,
           "u":26,
