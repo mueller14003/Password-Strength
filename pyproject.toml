@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Password Strength"
+bundle = "com.kyle-mueller.passwordstrength"
+version = "1.0.0"
+url = "https://github.com/mueller14003/Password-Strength"
+license = "BSD license"
+author = 'Kyle Mueller'
+author_email = "kyle.mueller.ghs@gmail.com"
+
+[tool.briefcase.app.passwordstrength]
+formal_name = "Password Strength"
+description = "Finds the password strength of an entered password."
+icon = "src/passwordstrength/resources/passwordstrength"
+sources = ['src/passwordstrength']
+requires = []
+
+
+[tool.briefcase.app.passwordstrength.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.passwordstrength.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.passwordstrength.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.passwordstrength.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.passwordstrength.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
