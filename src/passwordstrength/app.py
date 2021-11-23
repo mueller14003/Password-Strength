@@ -4,14 +4,14 @@ Finds the password strength of an entered password.
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
-from math import ceil, log2
+from math import log2
 
 a_size = {"l":26,
           "u":26,
           "n":10,
           "s":30}
 
-symbols = "`~!@#$%^&*()[]{}-_=+\\|;:/?.>,<"
+symbols = "`~!@#$%^&*()[]{}-_=+\\|;:/?.>,<\'\""
 
 is_symbol = lambda s: s in symbols
 
@@ -22,10 +22,10 @@ def get_size(p_word):
     return sum(map(a_size.get, set(map(get_type, p_word))))
 
 def get_combs(p_word):
-    return get_size(p_word) ** len(p_word)
+    return pow(get_size(p_word), len(p_word))
 
 def get_bits(p_word):
-    return ceil(log2(get_combs(p_word)))
+    return int(log2(get_combs(p_word)))
 
 class PasswordStrength(toga.App):
     def startup(self):
