@@ -6,10 +6,10 @@ from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 from math import log2
 
-a_size = {"l":26,
-          "u":26,
-          "n":10,
-          "s":30}
+a_size = {"l": 26, # Lowercase Letter
+          "u": 26, # Uppercase Letter
+          "n": 10, # Digit
+          "s": 30} # Symbol
 
 symbols = "`~!@#$%^&*()[]{}-_=+\\|;:/?.>,<\'\""
 
