@@ -9,7 +9,7 @@ from math import log2
 a_size = {"l": 26, # Lowercase Letter
           "u": 26, # Uppercase Letter
           "n": 10, # Digit
-          "s": 30} # Symbol
+          "s": 32} # Symbol
 
 symbols = "`~!@#$%^&*()[]{}-_=+\\|;:/?.>,<\'\""
 
