@@ -16,7 +16,7 @@ symbols = "`~!@#$%^&*()[]{}-_=+\\|;:/?.>,<\'\""
 is_symbol = lambda s: s in symbols
 
 def get_type(s):
-    return s.isalpha() * (s.islower() * "l" + s.isupper() * "u") + s.isdigit() * "n" + is_symbol(s) * "s"
+    return s.islower() * "l" + s.isupper() * "u" + s.isdigit() * "n" + is_symbol(s) * "s"
 
 def get_size(p_word):
     return sum(map(a_size.get, set(map(get_type, p_word))))
