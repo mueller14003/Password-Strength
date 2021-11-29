@@ -59,7 +59,7 @@ class PasswordStrength(toga.App):
         p_word = self.p_word_input.value or self.placeholder
 
         self.main_window.info_dialog(
-            f"Password Strength for {p_word}",
+            f"Password Strength for “{p_word}”",
             f"There are {get_combs(p_word)} combinations\nThat is equivalent to a key of {get_bits(p_word)} bits")
 
 def main():
